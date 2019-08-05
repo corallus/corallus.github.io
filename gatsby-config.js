@@ -1,6 +1,8 @@
 const path = require('path')
+let fsApi = require('netlify-cms-backend-fs/dist/fs/fs-express-api')
 
 module.exports = {
+  developMiddleware: fsApi,
   siteMetadata: {
     title: `Portfolio`,
     description: ``,
@@ -14,21 +16,21 @@ module.exports = {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/static/media`,
+        path: path.resolve('./static/media'),
         name: 'media',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/content`,
-        name: 'content',
+        path: path.resolve('./src/content/education'),
+        name: 'education',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/images`,
+        path: path.resolve('./src/images'),
         name: 'images',
       },
     },
@@ -75,7 +77,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
+        modulePath: `${__dirname}/src/cms/init.js`,
         manualInit: true,
         enableIdentityWidget: false,
         publicPath: 'admin',

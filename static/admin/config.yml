@@ -1,0 +1,29 @@
+backend:
+  name: github
+  branch: master
+  repo: corallus/portfolio
+  base_url: 'https://infaxka6yj.execute-api.eu-central-1.amazonaws.com'
+  auth_endpoint: '/prod/auth'
+
+media_folder: static/media
+public_folder: /media
+
+development_overrides:
+  backend:
+    name: file-system
+    api_root: 'http://localhost:8000/api'
+
+collections:
+  - name: "education"
+    label: "Education"
+    folder: "src/content/education"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "education"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: image, required: false}
+      - {label: "Degree", name: "degree", widget: "string"}
+      - {label: "School", name: "school", widget: "string"}
+      - {label: "Date", name: "date", widget: "date"}
+      - {label: "Description", name: "body", widget: "markdown"}
