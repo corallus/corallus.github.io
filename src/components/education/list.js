@@ -1,13 +1,13 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Education from './education';
+import Study from './study';
 
 export default () => {
-  const data = useStaticQuery(graphql`
+    const data = useStaticQuery(graphql`
     query EducationQuery {
         allMarkdownRemark(
             sort: { order: ASC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "education" } } }
+            filter: { frontmatter: { templateKey: { eq: "study" } } }
         ) {
             edges {
                 node {
@@ -17,8 +17,14 @@ export default () => {
         }
     }
   `)
-
-  return (
-      <React.Fragment/>
-  )
+    const studies = data.allMarkdownRemark.edges
+    return (
+        <React.Fragment>
+            {studies && studies.length &&
+                studies.map(({ node: post }) => (
+                    <Study study={post} key={post.id}></Study>
+                ))
+            }
+        </React.Fragment>
+    )
 }

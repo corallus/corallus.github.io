@@ -20,9 +20,9 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "education"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "study"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Image", name: "image", widget: image, required: false}
+      - {label: "Image", name: "image", widget: image, required: false, default: ''}
       - {label: "Degree", name: "degree", widget: "string"}
       - {label: "School", name: "school", widget: "string"}
       - {label: "Date", name: "date", widget: "date"}

@@ -1,1 +1,43 @@
 @import "~bootstrap/scss/bootstrap";
+
+body {
+    padding-left: $navbar-width;
+}
+
+@include media-breakpoint-up(md) {  
+    .resume-date {
+        min-width: 18rem;
+    }
+}
+
+@include media-breakpoint-up(lg) {  
+    .navbar {
+        .navbar-brand {
+            margin: auto auto 0;
+            display: flex;
+        }
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+        width: $navbar-width;
+        height: 100vh;
+        .navbar-collapse {
+            flex-grow: 0;
+            margin-bottom: auto;
+            .navbar-nav {
+                text-transform: uppercase;
+                flex-direction: column;
+                width: 100%;
+            }        
+        }
+    }
+}
+
+.resume-section {
+    max-width: 75rem;
+    min-height: 100vh;
+}
+    
+h1, h2, h3, .h1, .h2, .h3, .subheading {
+    text-transform: uppercase
+}
