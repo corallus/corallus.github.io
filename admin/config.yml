@@ -1,0 +1,55 @@
+backend:
+  name: github
+  branch: master
+  repo: corallus/portfolio
+  base_url: 'https://infaxka6yj.execute-api.eu-central-1.amazonaws.com'
+  auth_endpoint: '/prod/auth'
+
+media_folder: static/media
+public_folder: /media
+
+development_overrides:
+  backend:
+    name: file-system
+    api_root: 'http://localhost:8000/api'
+
+collections:
+  - name: "education"
+    label: "Education"
+    folder: "src/content/education"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "study"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: image, required: false}
+      - {label: "Degree", name: "degree", widget: "string"}
+      - {label: "School", name: "school", widget: "string"}
+      - {label: "Started", name: "started", widget: "date"}
+      - {label: "Ended", name: "ended", widget: "date", required: false}
+      - {label: "Description", name: "body", widget: "markdown", required: false}
+  - name: "portfolio"
+    label: "Portfolio"
+    folder: "src/content/portfolio"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Link", name: "link", widget: "string"}
+      - {label: "Image", name: "image", widget: image, required: false}
+      - {label: "Customer", name: "customer", widget: "string"}
+      - {label: "Toolset", name: "toolset", widget: "object", fields: [
+        {label: "Django", name: "django", widget: "boolean", required: false},
+        {label: "Wordpress", name: "wordpress", widget: "boolean", required: false},
+        {label: "React", name: "react", widget: "boolean", required: false},
+        {label: "Angular", name: "angular", widget: "boolean", required: false},
+        {label: "Gatsby", name: "gatsby", widget: "boolean", required: false},
+        {label: "Bootstrap", name: "bootstrap", widget: "boolean", required: false},
+        {label: "Webpack", name: "webpack", widget: "boolean", required: false},
+        {label: "Gulp", name: "gulp", widget: "boolean", required: false},
+        {label: "jQuery", name: "jquery", widget: "boolean", required: false},
+        {label: "Sass", name: "sass", widget: "boolean", required: false},
+        {label: "AWS", name: "aws", widget: "boolean", required: false}
+      ]}
+      - {label: "Started", name: "started", widget: "date"}
+      - {label: "Ended", name: "ended", widget: "date", required: false}
+      - {label: "Description", name: "body", widget: "markdown", required: false}
