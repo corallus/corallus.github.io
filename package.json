@@ -34,6 +34,7 @@
   "devDependencies": {
     "@iconify/icons-simple-icons": "^1.0.4",
     "@iconify/react": "^1.1.1",
+    "gh-pages": "^2.1.1",
     "netlify-cms-backend-fs": "^0.4.4",
     "prettier": "^1.18.2"
   },
@@ -47,13 +48,14 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "deploy": "gatsby build && gh-pages -d public",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/corallus/portfolio"
+    "url": "https://github.com/corallus/corallus.github.io"
   },
   "bugs": {
-    "url": "https://github.com/corallus/portfolio/issues"
+    "url": "https://github.com/corallus/corallus.github.io/issues"
   }
 }
