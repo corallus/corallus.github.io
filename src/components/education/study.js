@@ -6,10 +6,10 @@ export default ({ study }) => {
     <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
       <div className="resume-content">
         <h3 className="mb-0">
-          {study.frontmatter.title}
+          {study.frontmatter.title} <small className="text-muted">{study.frontmatter.degree}</small>
         </h3>
         <div className="subheading mb-3">
-          {study.frontmatter.degree}
+          {study.frontmatter.school}
         </div>
         <div
           dangerouslySetInnerHTML={{ __html: study.html }}

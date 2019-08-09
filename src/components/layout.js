@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
       <main className="container-fluid p-0">
         {children}
       </main>
-      <footer>
+      <footer className="p-3 p-lg-5">
         Last updated: {new Date().getFullYear()}
       </footer>
     </>

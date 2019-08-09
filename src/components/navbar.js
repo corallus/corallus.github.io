@@ -1,10 +1,11 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from "react"
 import { Navbar, Nav } from "react-bootstrap";
 import avatar from "../images/avatar.png"
 
 const Header = ({ siteTitle }) => {
+  const [expanded, setExpanded] = useState(false);
   const _handleLinkClick = (e, target) => {
     if (typeof window !== undefined) {
       e.preventDefault()
@@ -14,7 +15,7 @@ const Header = ({ siteTitle }) => {
   }
   const sections = ['about', 'education', 'portfolio', 'skills', 'interests']
   return (
-    <Navbar bg="primary" variant="dark" expand="lg" fixed="top">
+    <Navbar expanded={expanded} onToggle={() => setExpanded(!expanded)} bg="primary" variant="dark" expand="lg" fixed="top">
       <Navbar.Brand href="#home">
         <span className="d-block d-lg-none">
           {siteTitle}
@@ -25,11 +26,11 @@ const Header = ({ siteTitle }) => {
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
+        <Nav className="mr-auto" onClick={() => setExpanded(false)}>
           {sections.map(section =>
             <Link
               onClick={e => _handleLinkClick(e, section)}
-              to={'/#'+section}
+              to={'/#' + section}
               className="nav-link"
               key={section}
             >

@@ -16,6 +16,12 @@
     fill: #DA4567;
 }
 
+@include media-breakpoint-down(lg) {  
+    body {
+        padding-top: 56px; 
+    }
+}
+
 @include media-breakpoint-up(lg) {  
     body {
         padding-left: $navbar-width;

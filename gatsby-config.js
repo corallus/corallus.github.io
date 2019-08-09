@@ -4,7 +4,7 @@ let fsApi = require('netlify-cms-backend-fs/dist/fs/fs-express-api')
 module.exports = {
   developMiddleware: fsApi,
   siteMetadata: {
-    title: `Portfolio Vincent van Bergen`,
+    title: `Portfolio`,
     description: ``,
     author: `Vincent van Bergen`,
     github: `https://github.com/corallus`,
@@ -94,13 +94,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Portfolio Vincent van Bergen`,
+        short_name: `Vincent`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#fff`,
+        theme_color: `#bd5d38`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/avatar.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-offline`,

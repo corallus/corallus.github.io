@@ -9,7 +9,7 @@ export default ({ project }) => {
   return (
     <Card border="secondary" className="shadow">
       {project.frontmatter.image &&
-        <a href={project.frontmatter.link} target="_blank">
+        <a href={project.frontmatter.link} rel="noopener noreferrer" target="_blank">
           <Img className="card-img-top" fluid={project.frontmatter.image.childImageSharp.fluid} />
         </a>
       }
