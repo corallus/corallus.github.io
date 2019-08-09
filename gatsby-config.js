@@ -4,7 +4,7 @@ let fsApi = require('netlify-cms-backend-fs/dist/fs/fs-express-api')
 module.exports = {
   developMiddleware: fsApi,
   siteMetadata: {
-    title: `Portfolio`,
+    title: `Portfolio Vincent van Bergen`,
     description: ``,
     author: `Vincent van Bergen`,
     github: `https://github.com/corallus`,
@@ -13,34 +13,41 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include:`${__dirname}/src/icons` // See below to configure properly
+        }
+      }
+    },
+    {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: path.resolve('./static/media'),
+        path:`${__dirname}/static/media`,
         name: 'uploads',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: path.resolve('./src/content/education'),
-        name: 'education',
+        path:`${__dirname}/src/content`,
+        name: 'content',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: path.resolve('./src/images'),
+        path:`${__dirname}/src/images`,
         name: 'images',
       },
     },
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        file: path.resolve('./src/style/theme.scss'),
         data: '@import "variables.scss";',
         includePaths: [
-          path.resolve('./src/style'),
+          `${__dirname}/src/style`
         ],
       },
     },

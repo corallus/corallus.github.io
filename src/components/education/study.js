@@ -23,7 +23,7 @@ export default ({ study }) => {
 }
 
 export const query = graphql`
-  fragment EducationFragment on MarkdownRemark {
+  fragment StudyFragment on MarkdownRemark {
     excerpt(pruneLength: 400)
     html
     id
@@ -31,14 +31,8 @@ export const query = graphql`
       title
       degree
       school
-      date(formatString: "MMMM YYYY")
-      image {
-        childImageSharp {
-          fluid(maxWidth: 800, maxHeight: 600, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
+      started(formatString: "MMMM YYYY")
+      ended(formatString: "MMMM YYYY")
     }
   }
 `

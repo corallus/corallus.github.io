@@ -31,6 +31,7 @@ const Header = ({ siteTitle }) => {
               onClick={e => _handleLinkClick(e, section)}
               to={'/#'+section}
               className="nav-link"
+              key={section}
             >
               {section}
             </Link>

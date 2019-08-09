@@ -14,11 +14,14 @@ $h4-font-size:                1.5rem;
 $navbar-width: 17rem;
 $body-color: #868e96;
 $headings-color: #343a40;
+$enable-responsive-font-sizes: true;   
 
 $theme-colors: (
-  "primary": #6b00ff,
+  "primary": #bd5d38,
 );
 
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
+
+$card-columns-margin: $card-columns-gap;

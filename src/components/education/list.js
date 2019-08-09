@@ -6,12 +6,12 @@ export default () => {
     const data = useStaticQuery(graphql`
     query EducationQuery {
         allMarkdownRemark(
-            sort: { order: ASC, fields: [frontmatter___date] }
+            sort: { order: ASC, fields: [frontmatter___ended] }
             filter: { frontmatter: { templateKey: { eq: "study" } } }
         ) {
             edges {
                 node {
-                    ...EducationFragment
+                    ...StudyFragment
                 }
             }
         }

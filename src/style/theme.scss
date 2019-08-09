@@ -1,8 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
 
-body {
-    padding-left: $navbar-width;
-}
 
 @include media-breakpoint-up(md) {  
     .resume-date {
@@ -10,7 +7,19 @@ body {
     }
 }
 
+.navbar {
+    font-family: $headings-font-family;
+    font-size: 2rem
+}
+
+.tool-icon:hover {
+    fill: #DA4567;
+}
+
 @include media-breakpoint-up(lg) {  
+    body {
+        padding-left: $navbar-width;
+    }
     .navbar {
         .navbar-brand {
             margin: auto auto 0;
