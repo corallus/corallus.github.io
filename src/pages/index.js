@@ -26,11 +26,11 @@ const IndexPage = () => (
       </header>
       <div className="my-4">
         <p className="lead">
-          I am an experienced full-stack in webdeveloper. Since I started my studying computer science I have been active as a freelancer.
-          I have mostly provided my clients with complete solutions, ranging from backend CRM systems to frontend applications and hosting.
+          I am an experienced <strong>full-stack webdeveloper</strong>. Since I started studying <strong>computer science</strong> in 2007 I have been active as a freelancer.
+          I have mostly provided my clients with <strong>complete solutions</strong>, ranging from <strong>backend CRM systems</strong> to <strong>frontend applications</strong> and <strong>hosting</strong>.
       </p>
         <p className="lead">
-          Nowadays my focus is on frontend development combined with cloud applications.
+          Nowadays my passion is in <strong>frontend development</strong> powered by <strong>cloud solutions</strong>
       </p>
       </div>
 
