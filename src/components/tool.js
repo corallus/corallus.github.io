@@ -11,6 +11,7 @@ import webpackIcon from '@iconify/icons-simple-icons/webpack';
 import gatsbyIcon from '@iconify/icons-simple-icons/gatsby';
 import jQueryIcon from '@iconify/icons-simple-icons/jquery';
 import awsIcon from '@iconify/icons-simple-icons/amazonaws';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
 export default (props) => {
     const icons = {
@@ -28,8 +29,16 @@ export default (props) => {
     }
     const icon = icons[props.tool]
     return (
-        <>
+        <OverlayTrigger
+            key="top"
+            placement="bottom"
+            overlay={
+                <Tooltip id='tooltip-top'>
+                    {props.tool}
+                </Tooltip>
+            }
+        >
             <Icon icon={icon} {...props} className="tool-icon" />
-        </>
+        </OverlayTrigger>
     )
 }
