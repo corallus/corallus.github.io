@@ -36,7 +36,8 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Link", name: "link", widget: "string"}
       - {label: "Image", name: "image", widget: image, required: false}
-      - {label: "Customer", name: "customer", widget: "string"}
+      - {label: "Customer", name: "customer", widget: "string", required: false}
+      - {label: "Archive", name: "archive", widget: "boolean", required: false}
       - {label: "Toolset", name: "toolset", widget: "object", fields: [
         {label: "Django", name: "django", widget: "boolean", required: false},
         {label: "Wordpress", name: "wordpress", widget: "boolean", required: false},
