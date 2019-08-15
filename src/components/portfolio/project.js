@@ -7,15 +7,15 @@ import Tool from "../tool"
 export default ({ project }) => {
   const toolset = project.frontmatter.toolset
   return (
-    <Card border="secondary" className="shadow">
+    <Card border="secondary" className="shadow h-100">
       {project.frontmatter.image &&
         <a href={project.frontmatter.link} rel="noopener noreferrer" target="_blank">
           <Img className="card-img-top" fluid={project.frontmatter.image.childImageSharp.fluid} />
         </a>
       }
-      <Card.Body>
+      <Card.Body className="d-flex flex-column">
         <Card.Title as="h3">{project.frontmatter.title}</Card.Title>
-        <Card.Text dangerouslySetInnerHTML={{ __html: project.html }} />
+        <Card.Text dangerouslySetInnerHTML={{ __html: project.html }} className="flex-grow-1" />
         <ul className="list-inline">
           {toolset && Object.keys(toolset).map((key, index) => (
             toolset[key] &&
