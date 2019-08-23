@@ -4,18 +4,18 @@ import Study from './study';
 
 export default () => {
     const data = useStaticQuery(graphql`
-    query EducationQuery {
-        allMarkdownRemark(
-            sort: { order: ASC, fields: [frontmatter___ended] }
-            filter: { frontmatter: { templateKey: { eq: "study" } } }
-        ) {
-            edges {
-                node {
-                    ...StudyFragment
+        query StudiesQuery {
+            allMarkdownRemark(
+                sort: { order: ASC, fields: [frontmatter___ended] }
+                filter: { frontmatter: { templateKey: { eq: "study" } } }
+            ) {
+                edges {
+                    node {
+                        ...StudyFragment
+                    }
                 }
             }
         }
-    }
   `)
     const studies = data.allMarkdownRemark.edges
     return (

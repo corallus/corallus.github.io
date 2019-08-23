@@ -23,8 +23,8 @@ export default () => {
         <Row>
             {portfolio && portfolio.length &&
                 portfolio.map(({ node: post }) => (
-                    <Col sm={3} lg={4} className="mb-5">
-                        <Project project={post} key={post.id}></Project>
+                    <Col sm={3} lg={4} className="mb-5" key={post.id}>
+                        <Project project={post} />
                     </Col>
                 ))
             }

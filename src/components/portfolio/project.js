@@ -38,6 +38,7 @@ export const query = graphql`
       title
       customer
       link
+      archive
       toolset {
         react
         angular

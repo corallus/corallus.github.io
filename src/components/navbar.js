@@ -13,7 +13,7 @@ const Header = ({ siteTitle }) => {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }
-  const sections = ['about', 'education', 'portfolio', 'skills', 'interests']
+  const sections = ['about', 'education', 'portfolio', 'interests']
   return (
     <Navbar expanded={expanded} onToggle={() => setExpanded(!expanded)} bg="primary" variant="dark" expand="lg" fixed="top">
       <Navbar.Brand href="#home">

@@ -1,10 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Education from "../components/education/list"
+import Education from "../components/education"
 import Portfolio from "../components/portfolio/list"
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { Nav } from "react-bootstrap";
+import { Nav, Badge, Row, Col } from "react-bootstrap";
+import { graphql, useStaticQuery } from "gatsby";
 
 const Section = (props) => (
   <section id={props.id} className="resume-section p-3 p-lg-5 d-flex flex-column justify-content-center">
@@ -12,67 +13,97 @@ const Section = (props) => (
   </section>
 )
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Vincent van Bergen" />
-    <Section id="about">
-      <header>
-        <h1>
-          Vincent <span className="text-primary">van Bergen</span>
-        </h1>
-        <div className="subheading">
-          Johannesburgstraat 9 · 5642EK, Eindhoven · +31 681 506 563  · <a href="mailto:v.vanbergen@gmail.com">v.vanbergen@gmail.com</a>
-        </div>
-      </header>
-      <div className="my-4">
-        <p className="lead">
-          I am an experienced <strong>full-stack webdeveloper</strong>. Since I started studying <strong>computer science</strong> in 2007 I have been active as a freelancer.
-          I have mostly provided my clients with <strong>complete solutions</strong>, ranging from <strong>backend CRM systems</strong> to <strong>frontend applications</strong> and <strong>hosting</strong>.
-      </p>
-        <p className="lead">
-          Nowadays my passion is in <strong>frontend development</strong> powered by <strong>cloud solutions</strong>
-      </p>
-      </div>
+const IndexPage = () => {
+  const { markdownRemark: about } = useStaticQuery(graphql`
+      query AboutQuery {
+        markdownRemark(frontmatter: {templateKey: {eq: "about"}}) {
+          frontmatter {
+            title
+            github
+            linkedin
+            name
+            templateKey
+            surname
+            skills {
+              name
+              skills {
+                name
+                skills
+              }
+            }
+          }
+          html
+        }
+      }
+    `)
 
-      <Nav className="social-icons">
-        <Nav.Link href="https://www.linkedin.com/in/vincent-van-bergen/" target="_blank" className="pl-0">
-          <FaLinkedin size="64" />
-        </Nav.Link>
-        <Nav.Link href="https://github.com/corallus">
-          <FaGithub size="64" />
-        </Nav.Link>
-      </Nav>
-    </Section>
-    <hr className="d-print-none" />
-    <Section title="Education" id="education">
-      <header>
-        <h2>Education</h2>
-      </header>
-      <p className="lead mb-5">
-        After my bachelor in computer science I started doing a master at EIT Digital, an organization for European entrepreneurs driving digital innovation in ICT & Entrepeneurship. My first years' specialization is in Service Design and Engineering, which I have completed at Aalto University in Finland. My second years' specialization is Service Oriented Business Process Management at Eindhoven University of Technology. After passing all courses I dropped out during my masters' thesis to work as a self-employed web developer.
-      </p>
-      <Education />
-    </Section>
-    <hr className="d-print-none" />
-    <Section id="portfolio">
-      <header>
-        <h2>Portfolio</h2>
-      </header>
-      <Portfolio />
-    </Section>
-    <hr className="d-print-none" />
-    <Section title="Skills" id="skills">
-      <header>
-        <h2>Skills</h2>
-      </header>
-    </Section>
-    <hr className="d-print-none" />
-    <Section title="Interests" id="interests">
-      <header>
-        <h2>Interests</h2>
-      </header>
-    </Section>
-  </Layout>
-)
+  const fullName = [about.frontmatter.name, about.frontmatter.surname].join(' ')
+  return (
+    <Layout>
+      <SEO title={fullName} />
+      <Section id="about">
+        <header>
+          <h1>
+            {about.frontmatter.name} <span className="text-primary">{about.frontmatter.surname}</span>
+          </h1>
+          <div className="subheading">
+            {about.frontmatter.title}
+          </div>
+        </header>
+        <div className="my-4 lead" dangerouslySetInnerHTML={{ __html: about.html }} />
+
+        <section title="Skills" id="skills">
+          <header>
+            <h2>Skills</h2>
+          </header>
+          <Row>
+          {about.frontmatter.skills && about.frontmatter.skills.map(skill => (
+            <Col>
+              <h3>{skill.name}</h3>
+              {skill.skills && skill.skills.map(subskill => (
+                <div>
+                  <Badge variant="secondary" className="mx-2">{subskill.name}</Badge>
+                  {subskill.skills && subskill.skills.map(subsubskill => (
+                    <Badge variant="primary" className="mx-2">{subsubskill}</Badge>
+                  ))}
+                </div>
+              ))}
+            </Col>
+          ))}
+          </Row>
+        </section>
+
+        <Nav className="social-icons">
+          <Nav.Link href={about.frontmatter.linkedin} target="_blank" className="pl-0">
+            <FaLinkedin size="64" />
+          </Nav.Link>
+          <Nav.Link href={about.frontmatter.github} target="_blank">
+            <FaGithub size="64" />
+          </Nav.Link>
+        </Nav>
+      </Section>
+      <hr className="d-print-none" />
+      <Section title="Education" id="education">
+        <header>
+          <h2>Education</h2>
+        </header>
+        <Education />
+      </Section>
+      <hr className="d-print-none" />
+      <Section id="portfolio">
+        <header>
+          <h2>Portfolio</h2>
+        </header>
+        <Portfolio />
+      </Section>
+      <hr className="d-print-none" />
+      <Section title="Interests" id="interests">
+        <header>
+          <h2>Interests</h2>
+        </header>
+      </Section>
+    </Layout>
+  )
+}
 
 export default IndexPage
