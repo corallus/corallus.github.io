@@ -57,14 +57,14 @@ const IndexPage = () => {
             <h2>Skills</h2>
           </header>
           <Row>
-          {about.frontmatter.skills && about.frontmatter.skills.map(skill => (
-            <Col>
+          {about.frontmatter.skills && about.frontmatter.skills.map((skill, i) => (
+            <Col key={i}>
               <h3>{skill.name}</h3>
-              {skill.skills && skill.skills.map(subskill => (
-                <div>
-                  <Badge variant="secondary" className="mx-2">{subskill.name}</Badge>
-                  {subskill.skills && subskill.skills.map(subsubskill => (
-                    <Badge variant="primary" className="mx-2">{subsubskill}</Badge>
+              {skill.skills && skill.skills.map((subskill, j) => (
+                <div key={j}>
+                  <Badge variant="secondary" className="mr-2">{subskill.name}</Badge>
+                  {subskill.skills && subskill.skills.map((subsubskill, k) => (
+                    <Badge variant="primary" className="mx-2" key={k}>{subsubskill}</Badge>
                   ))}
                 </div>
               ))}

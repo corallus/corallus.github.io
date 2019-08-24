@@ -27,6 +27,19 @@ skills:
       - name: CSS
       - name: SASS
       - name: LESS
+  - name: Cloud
+    skills:
+      - name: Google Cloud
+        skills:
+          - Firebase
+      - name: AWS
+        skills:
+          - Lambda
+          - Cloudfront
+          - Amplify
+          - S3
+          - CodePipeline
+          - API Gateway
 ---
 I am an experienced **full-stack webdeveloper**. Since I started studying **computer science** in 2007 I have been active as a freelancer. I have mostly provided my clients with **complete solutions**, ranging from **backend** CRM systems to **frontend** applications and hosting.
 
