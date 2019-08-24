@@ -1,8 +1,8 @@
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
-import { Navbar, Nav } from "react-bootstrap";
-import avatar from "../images/avatar.png"
+import { Navbar, Nav } from "react-bootstrap"
+import Img from "gatsby-image"
 
 const Header = ({ siteTitle }) => {
   const [expanded, setExpanded] = useState(false);
@@ -13,6 +13,21 @@ const Header = ({ siteTitle }) => {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }
+  const avatar = useStaticQuery(
+    graphql`
+      query {
+        file(relativePath: { eq: "avatar.png" }) {
+          childImageSharp {
+            # Specify the image processing specifications right in the query.
+            # Makes it trivial to update as your page's design changes.
+            fixed(width: 200, height: 200) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    `
+  )
   const sections = ['about', 'education', 'portfolio', 'interests']
   return (
     <Navbar expanded={expanded} onToggle={() => setExpanded(!expanded)} bg="primary" variant="dark" expand="lg" fixed="top">
@@ -21,7 +36,7 @@ const Header = ({ siteTitle }) => {
           {siteTitle}
         </span>
         <span className="d-none d-lg-block">
-          <img src={avatar} className="img-fluid img-profile rounded-circle border-1 mx-auto mb-2" alt="portret" />
+          <Img fixed={avatar.file.childImageSharp.fixed} className="img-fluid img-profile rounded-circle border-1 mx-auto mb-2" alt="portret" />
         </span>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
