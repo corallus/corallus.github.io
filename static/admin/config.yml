@@ -54,6 +54,15 @@ collections:
       - {label: "Started", name: "started", widget: "date"}
       - {label: "Ended", name: "ended", widget: "date", required: false}
       - {label: "Description", name: "body", widget: "markdown", required: false}
+  - name: "interests"
+    label: "Interests"
+    folder: "src/content/interests"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "interest"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: image, required: false}
+      - {label: "Description", name: "body", widget: "markdown", required: false}
   - label: "Pages"
     name: "pages"
     files:

@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Education from "../components/education"
 import Portfolio from "../components/portfolio/list"
+import Interests from "../components/interests/list"
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { Nav, Badge, Row, Col } from "react-bootstrap";
 import { graphql, useStaticQuery } from "gatsby";
@@ -58,7 +59,7 @@ const IndexPage = () => {
           </header>
           <Row>
           {about.frontmatter.skills && about.frontmatter.skills.map((skill, i) => (
-            <Col key={i}>
+            <Col xs={12} sm={6} md={3} key={i} className="mb-4">
               <h3>{skill.name}</h3>
               {skill.skills && skill.skills.map((subskill, j) => (
                 <div key={j}>
@@ -101,6 +102,7 @@ const IndexPage = () => {
         <header>
           <h2>Interests</h2>
         </header>
+        <Interests />
       </Section>
     </Layout>
   )
