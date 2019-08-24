@@ -54,3 +54,24 @@ collections:
       - {label: "Started", name: "started", widget: "date"}
       - {label: "Ended", name: "ended", widget: "date", required: false}
       - {label: "Description", name: "body", widget: "markdown", required: false}
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "About"
+        name: "about"
+        file: "src/content/about.md"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about"}
+          - {label: Title, name: title, widget: string}
+          - {label: Surname, name: surname, widget: string}
+          - {label: Name, name: name, widget: string}
+          - {label: Github, name: github, widget: string}
+          - {label: LinkedIn, name: linkedin, widget: string}
+          - {label: Description, name: body, widget: markdown}
+          - {label: Skills, name: skills, widget: list, fields: [
+              {label: Name, name: name, widget: string},
+              {label: Skills, name: skills, widget: list, fields: [
+                {label: Name, name: name, widget: string},
+                {label: Skills, name: skills, widget: list, required: false}
+              ]}
+          ]}
