@@ -3,23 +3,9 @@ phases:
     install:        
         runtime-versions:
             nodejs: 10
-        commands:            
-            - 'touch .npmignore'
-            - 'npm install -g gatsby'
     pre_build:        
         commands:            
-            - 'npm install --production'
-            - 'npm install corallus/gatsby-theme-psg'    
+            - 'yarn install'    
     build:        
         commands:            
-            - 'npm run build'    
-    post_build:
-        commands:
-            - aws s3 sync public/ "s3://puurhollands" --acl=public-read --delete
-            - aws cloudfront create-invalidation --distribution-id "E10NLBFY0HXQLI" --paths "/*"
-
-artifacts:    
-    base-directory: public
-    files:        
-        - '**/*'    
-    discard-paths: no
+            - 'yarn deploy'    
