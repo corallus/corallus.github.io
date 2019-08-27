@@ -1,0 +1,23 @@
+---
+templateKey: project
+title: Events 
+websites:
+  - link: 'https://www.gigiinconcert.com'
+    image: /media/img-2019-08-08-124801.png
+  - link: 'https://www.puurhollands.eu'
+    image: /media/img-2019-08-09-160453.png
+  - link: 'https://www.sterrenvanholland.nl'
+    image: /media/img-2019-08-28-001144.png
+toolset:
+  aws: true
+  bootstrap: true
+  gatsby: true
+  react: true
+  sass: true
+  webpack: true
+started: 2019-03-01T22:59:35.541Z
+ended: ''
+---
+My client, an event organizer has to maintain many different event websites. My task was to improve the quality and maintainability of their websites. The websites should be able to handle large amount of peak traffic at low cost.
+
+I have created a gatsby theme as a basis for all websites. This guarantees quality in terms of speed, SEO and ability to handle peak traffic. Netlify CMS allows my client to control the content.

@@ -1,8 +1,8 @@
 ---
 templateKey: project
 title: allure-almere.nl
+websites: []
 link: 'https://www.allure-almere.nl'
-customer: De Realisatie
 archive: true
 toolset:
   bootstrap: true

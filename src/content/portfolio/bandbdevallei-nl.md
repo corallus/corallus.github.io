@@ -1,8 +1,8 @@
 ---
 templateKey: project
 title: bandbdevallei.nl
+websites: []
 link: 'https://www.bandbdevallei.nl'
-customer: ' '
 archive: true
 toolset:
   bootstrap: true

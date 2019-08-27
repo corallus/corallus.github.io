@@ -3,7 +3,6 @@ templateKey: project
 title: virtualarchitecture.nl
 link: 'https://www.virtualarchitecture.nl'
 image: /media/img-2019-08-08-124318.png
-customer: Virtual Architecture
 toolset:
   bootstrap: true
   django: true

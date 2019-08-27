@@ -1,9 +1,9 @@
 ---
 templateKey: project
 title: de-realisatie.nl
+websites: []
 link: 'https://www.de-realisatie.nl'
 image: /media/img-2019-08-08-130524.png
-customer: De Realisatie
 toolset:
   bootstrap: true
   django: true

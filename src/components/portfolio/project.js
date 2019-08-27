@@ -36,9 +36,17 @@ export const query = graphql`
     id
     frontmatter {
       title
-      customer
-      link
       archive
+      websites {
+        link
+        image {
+          childImageSharp {
+            fluid(maxWidth: 1024, maxHeight: 576, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
       toolset {
         react
         angular
@@ -54,13 +62,6 @@ export const query = graphql`
       }
       started(formatString: "MMMM YYYY")
       ended(formatString: "MMMM YYYY")
-      image {
-        childImageSharp {
-          fluid(maxWidth: 1024, maxHeight: 576, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
     }
   }
 `

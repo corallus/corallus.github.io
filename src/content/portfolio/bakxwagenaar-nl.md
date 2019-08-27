@@ -1,9 +1,9 @@
 ---
 templateKey: project
 title: bakxwagenaar.nl
+websites: []
 link: 'https://www.bakxwagenaar.nl'
 image: /media/img-2019-08-08-130306.png
-customer: Bakx & Wagenaar
 toolset:
   bootstrap: true
   gulp: true

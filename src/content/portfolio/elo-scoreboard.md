@@ -1,9 +1,11 @@
 ---
 templateKey: project
 title: Elo Scoreboard
+websites:
+  - link: 'https://beerpong.dispuutbaldr.com'
+    image: /media/img-2019-08-09-162401.png
 link: 'https://beerpong.dispuutbaldr.com'
 image: /media/img-2019-08-09-162401.png
-customer: Dispuut Baldr
 toolset:
   angular: true
   bootstrap: true

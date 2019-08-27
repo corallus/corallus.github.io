@@ -3,7 +3,6 @@ templateKey: project
 title: workspacer.nl
 link: 'https://www.workspacer.nl'
 image: ''
-customer: Workspacer
 archive: true
 toolset:
   aws: true
