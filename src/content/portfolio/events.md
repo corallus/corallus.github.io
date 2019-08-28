@@ -1,13 +1,16 @@
 ---
 templateKey: project
-title: Events 
+title: Events
 websites:
   - link: 'https://www.gigiinconcert.com'
     image: /media/img-2019-08-08-124801.png
+    name: gigiinconcert.com
   - link: 'https://www.puurhollands.eu'
     image: /media/img-2019-08-09-160453.png
+    name: puurhollands.eu
   - link: 'https://www.sterrenvanholland.nl'
     image: /media/img-2019-08-28-001144.png
+    name: sterrenvanholland.nl
 toolset:
   aws: true
   bootstrap: true

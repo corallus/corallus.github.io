@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Project from './project';
-import { Col, Row, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 export default () => {
     const [showArchive, setShowArchive] = useState(false)
@@ -25,15 +25,11 @@ export default () => {
 
     return (
         <>
-            <Row>
-                {portfolio && portfolio.length &&
-                    portfolio.slice(0, itemsToShow).map(({ node: post }) => (
-                        <Col sm={3} lg={4} className="mb-5" key={post.id}>
-                            <Project project={post} />
-                        </Col>
-                    ))
-                }
-            </Row>
+            {portfolio && portfolio.length &&
+                portfolio.slice(0, itemsToShow).map(({ node: post }) => (
+                    <Project project={post} key={post.id} />
+                ))
+            }
             <Button variant="info" className="d-print-none" onClick={() => setShowArchive(!showArchive)}>Show {showArchive ? 'less' : 'more'}</Button>
         </>
     )

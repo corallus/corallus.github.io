@@ -4,12 +4,16 @@ title: Django CMS websites
 websites:
   - link: 'https://www.en-co.nl'
     archive: true
+    name: en-co.nl
   - link: 'https://www.fysiotherapiehelftheuvel.nl'
     archive: true
+    name: fysiotherapiehelftheuvel.nl
   - link: 'https://www.tyrenetnooteboom.nl'
     archive: true
+    name: tyrenetnooteboom.nl
   - link: 'https://www.nanoos.nl'
     archive: true
+    name: nanoos.nl
 archive: true
 toolset:
   bootstrap: true

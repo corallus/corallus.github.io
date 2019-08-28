@@ -1,9 +1,7 @@
 ---
 templateKey: project
 title: Elo Scoreboard
-websites:
-  - link: 'https://beerpong.dispuutbaldr.com'
-    image: /media/img-2019-08-09-162401.png
+websites: []
 link: 'https://beerpong.dispuutbaldr.com'
 image: /media/img-2019-08-09-162401.png
 toolset:

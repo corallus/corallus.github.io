@@ -2,21 +2,31 @@
 templateKey: project
 title: New estate Django CMS
 websites:
-  - link: 'https://www.allure-blaricum.nl'
+  - link: ''
     archive: false
-  - link: 'https://www.allure-veenendaal.nl'
+    name: allure-blaricum.nl
+  - link: ''
     archive: false
-  - link: 'https://www.allureinpolderwijk.nl'
+    name: allure-veenendaal.nl
+  - link: ''
     archive: false
-  - link: 'https://www.appartementen-gibraltar.nl'
+    name: allureinpolderwijk.nl
+  - link: ''
     archive: false
-  - link: 'https://www.allure-zeewolde.nl'
+    name: appartementen-gibraltar.nl
+  - link: ''
     archive: false
-  - link: 'https://www.fase1.allure-zeewolde.nl'
-  - link: 'https://www.tussenduinentuin.nl'
-  - link: 'https://www.upandown.nl'
-  - link: 'https://www.wolderwijdseblik.nl'
-  - link: 'https://www.yourchoice-almere.nl'
+    name: allure-zeewolde.nl
+  - link: ''
+    name: fase1.allure-zeewolde.nl
+  - link: ''
+    name: tussenduinentuin.nl
+  - link: ''
+    name: upandown.nl
+  - link: ''
+    name: wolderwijdseblik.nl
+  - link: ''
+    name: yourchoice-almere.nl
 archive: true
 toolset:
   bootstrap: true
