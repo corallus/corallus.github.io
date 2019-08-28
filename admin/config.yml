@@ -34,9 +34,13 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Link", name: "link", widget: "string"}
+      - {label: "Website(s)", name: "websites", widget: "list", fields: [
+        {label: "Name", name: "name", widget: "string"},
+        {label: "Link", name: "link", widget: "string", required: false},
+        {label: "Image", name: "image", widget: image, required: false}
+      ]}
+      - {label: "Link", name: "link", widget: "string", required: false}
       - {label: "Image", name: "image", widget: image, required: false}
-      - {label: "Customer", name: "customer", widget: "string", required: false}
       - {label: "Archive", name: "archive", widget: "boolean", required: false}
       - {label: "Toolset", name: "toolset", widget: "object", fields: [
         {label: "Django", name: "django", widget: "boolean", required: false},
