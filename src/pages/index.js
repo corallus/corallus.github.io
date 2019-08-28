@@ -1,12 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Education from "../components/education"
 import Portfolio from "../components/portfolio/list"
 import Interests from "../components/interests/list"
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { Nav, Badge, Row, Col } from "react-bootstrap";
 import { graphql, useStaticQuery } from "gatsby";
+import Education from "../components/education/list"
 
 const Section = (props) => (
   <section id={props.id} className="resume-section p-3 p-lg-5 d-flex flex-column justify-content-center">

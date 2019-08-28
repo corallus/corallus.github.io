@@ -42,7 +42,6 @@ export default ({ project }) => {
               {toolset && Object.keys(toolset).map((key, index) => (
                 toolset[key] &&
                 <li className="list-inline-item" key={index}>
-                  {key}
                   <Tool tool={key} size="32" width="2em" />
                 </li>
               ))}
@@ -53,7 +52,11 @@ export default ({ project }) => {
                 <Row>
                   {websites.map((website, index) =>
                     <Col sm={4} xl={3} className="mb-5" key={index}>
-                      <Website title={website.name} link={website.link} image={website.image} archived={website.archived} />
+                      {website.image ?
+                        <Website title={website.name} link={website.link} image={website.image} archived={website.archived} />
+                        :
+                        website.name
+                      }
                     </Col>
                   )}
                 </Row>
@@ -105,6 +108,7 @@ export const query = graphql`
         jquery
         aws
         sass
+        firebase
       }
       started(formatString: "MMMM YYYY")
       ended(formatString: "MMMM YYYY")

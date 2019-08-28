@@ -17,16 +17,32 @@ skills:
         skills:
           - Angular Universal
       - name: Webpack
-  - name: Python
+  - name: Backend
     skills:
-      - name: Django
+      - name: Python
         skills:
+          - Django
           - Django CMS
-  - name: Stylesheets
+          - scikit-learn
+          - ''
+      - name: Database
+        skills:
+          - MySQL
+          - NoSQL
+      - name: PHP
+        skills:
+          - Wordpress
+          - ''
+      - name: GoLang
+        skills:
+          - beego
+  - name: Design
     skills:
-      - name: CSS
-      - name: SASS
-      - name: LESS
+      - name: Stylesheets
+        skills:
+          - CSS
+          - LESS
+          - SASS
   - name: Cloud
     skills:
       - name: Google Cloud
@@ -40,6 +56,10 @@ skills:
           - S3
           - CodePipeline
           - API Gateway
+  - name: Languages
+    skills:
+      - name: Dutch
+      - name: English
 ---
 I am an experienced **full-stack webdeveloper**. Since starting studying **computer science** in 2007, I have been active as a freelancer providing my clients with **complete solutions**, ranging from **backend** CRM systems to **frontend** applications and hosting.
 

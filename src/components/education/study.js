@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 export default ({ study }) => {
   return (
-    <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+    <div className="resume-item d-flex flex-column flex-md-row justify-content-between my-5">
       <div className="resume-content">
         <h3 className="mb-0">
           {study.frontmatter.title} <small className="text-muted">{study.frontmatter.degree}</small>

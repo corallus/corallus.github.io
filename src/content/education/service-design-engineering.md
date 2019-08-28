@@ -6,3 +6,4 @@ school: 'EIT Digital Master School, Aalto University'
 started: 2019-08-05T21:24:23.913Z
 ended: 2019-08-05T21:24:23.913Z
 ---
+EIT Digital is organization for European entrepreneurs driving digital innovation in ICT & Entrepeneurship.
