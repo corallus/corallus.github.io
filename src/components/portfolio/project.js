@@ -35,7 +35,7 @@ export default ({ project }) => {
         <Col>
           <Card.Body>
             <header>
-              <Card.Title><h3>{title}</h3></Card.Title>
+              <Card.Title as="h3">{title}</Card.Title>
             </header>
             <div dangerouslySetInnerHTML={{ __html: project.html }} />
             <ul className="list-inline my-4">

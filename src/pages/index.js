@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import Portfolio from "../components/portfolio/list"
 import Interests from "../components/interests/list"
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { Nav, Badge, Row, Col } from "react-bootstrap";
+import { Nav, Badge, Row, Col, Card } from "react-bootstrap";
 import { graphql, useStaticQuery } from "gatsby";
 import Education from "../components/education/list"
 
@@ -58,19 +58,23 @@ const IndexPage = () => {
             <h2>Skills</h2>
           </header>
           <Row>
-          {about.frontmatter.skills && about.frontmatter.skills.map((skill, i) => (
-            <Col xs={12} sm={6} md={3} key={i} className="mb-4">
-              <h3>{skill.name}</h3>
-              {skill.skills && skill.skills.map((subskill, j) => (
-                <div key={j}>
-                  <Badge variant="secondary" className="mr-2">{subskill.name}</Badge>
-                  {subskill.skills && subskill.skills.map((subsubskill, k) => (
-                    <Badge variant="primary" className="mx-2" key={k}>{subsubskill}</Badge>
-                  ))}
-                </div>
-              ))}
-            </Col>
-          ))}
+            {about.frontmatter.skills && about.frontmatter.skills.map((skill, i) => (
+              <Col xs={12} sm={6} md={4} key={i} className="mb-4">
+                <Card className="h-100">
+                  <Card.Header>{skill.name}</Card.Header>
+                  <Card.Body className="">
+                    {skill.skills && skill.skills.map((subskill, j) => (
+                      <Card.Text key={j}>
+                        <Badge variant="secondary" className="mr-2 my-2">{subskill.name}</Badge>
+                        {subskill.skills && subskill.skills.map((subsubskill, k) => (
+                          <Badge variant="primary" className="mx-2 my-2" key={k}>{subsubskill}</Badge>
+                        ))}
+                      </Card.Text>
+                    ))}
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
           </Row>
         </section>
 
