@@ -25,7 +25,7 @@ export default ({ project }) => {
   return (
     <Card as="section" className="my-5">
       <Row className="no-gutters">
-        {project.frontmatter.image &&
+        {image &&
           <Col sm={6}>
             <a href={link} rel="noopener noreferrer" target="_blank">
               <Img fluid={image.childImageSharp.fluid} className="card-img" />
@@ -37,13 +37,12 @@ export default ({ project }) => {
             <header>
               <Card.Title><h3>{title}</h3></Card.Title>
             </header>
-            <Card.Text>
-              <div dangerouslySetInnerHTML={{ __html: project.html }} />
-            </Card.Text>
+            <div dangerouslySetInnerHTML={{ __html: project.html }} />
             <ul className="list-inline my-4">
               {toolset && Object.keys(toolset).map((key, index) => (
                 toolset[key] &&
                 <li className="list-inline-item" key={index}>
+                  {key}
                   <Tool tool={key} size="32" width="2em" />
                 </li>
               ))}

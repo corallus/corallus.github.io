@@ -41,6 +41,6 @@ skills:
           - CodePipeline
           - API Gateway
 ---
-I am an experienced **full-stack webdeveloper**. Since I started studying **computer science** in 2007 I have been active as a freelancer. I have mostly provided my clients with **complete solutions**, ranging from **backend** CRM systems to **frontend** applications and hosting.
+I am an experienced **full-stack webdeveloper**. Since starting studying **computer science** in 2007, I have been active as a freelancer providing my clients with **complete solutions**, ranging from **backend** CRM systems to **frontend** applications and hosting.
 
 Nowadays my passion is in **frontend development** powered by **cloud solutions**.

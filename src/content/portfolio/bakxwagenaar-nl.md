@@ -13,4 +13,4 @@ toolset:
 started: 2017-08-01T11:03:16.046Z
 ended: 2018-09-01T11:03:16.074Z
 ---
-Herontwikkeling frontend en backend en ontwikkeling van E-commerce functionaliteiten
+My job was to re-implement the wordpress theme for performance and maintainability. Furthermore I have implemented the E-commerce features for my clients academy.
