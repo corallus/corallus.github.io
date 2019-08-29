@@ -2,14 +2,13 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Portfolio from "../components/portfolio/list"
-import Interests from "../components/interests/list"
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { Nav, Badge, Row, Col, Card } from "react-bootstrap";
 import { graphql, useStaticQuery } from "gatsby";
 import Education from "../components/education/list"
 
 const Section = (props) => (
-  <section id={props.id} className="resume-section p-3 p-lg-5 d-flex flex-column justify-content-center">
+  <section id={props.id} className="resume-section p-3 p-lg-5 d-flex d-print-block flex-column justify-content-center">
     {props.children}
   </section>
 )
@@ -81,9 +80,15 @@ const IndexPage = () => {
         <Nav className="social-icons">
           <Nav.Link href={about.frontmatter.linkedin} target="_blank" className="pl-0">
             <FaLinkedin size="64" />
+            <span className="ml-2 d-none d-print-inline">
+              {about.frontmatter.linkedin}
+            </span>
           </Nav.Link>
           <Nav.Link href={about.frontmatter.github} target="_blank">
             <FaGithub size="64" />
+            <span className="ml-2 d-none d-print-inline">
+              {about.frontmatter.github}
+            </span>
           </Nav.Link>
         </Nav>
       </Section>

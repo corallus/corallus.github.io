@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
         {children}
       </main>
       <footer className="p-3 p-lg-5">
-        Last updated: {new Date().getFullYear()}
+        Last updated: {new Date().toString()}
       </footer>
     </>
   )

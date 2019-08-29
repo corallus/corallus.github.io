@@ -4,6 +4,15 @@
     font-weight: bold
 }
 
+@media print {
+    .resume-item {
+        page-break-inside: avoid;
+        display: block
+    }
+    .resume-section {
+        display: block
+    }
+}
 
 @include media-breakpoint-up(md) {  
     .resume-date {

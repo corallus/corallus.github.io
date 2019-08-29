@@ -23,7 +23,7 @@ const Website = ({ title, image = null, link, archived }) => {
 export default ({ project }) => {
   const { title, image, link, toolset, websites } = project.frontmatter
   return (
-    <Card as="section" className="my-5">
+    <Card as="section" className="resume-item my-5">
       <Row className="no-gutters">
         {image &&
           <Col sm={6}>
