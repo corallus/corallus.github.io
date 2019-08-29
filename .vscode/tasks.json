@@ -9,6 +9,7 @@
             "problemMatcher": [
                 "$eslint-compact"
             ]
+<<<<<<< HEAD
         },
         {
             "type": "npm",
@@ -16,6 +17,8 @@
             "problemMatcher": [
                 "$eslint-compact"
             ]
+=======
+>>>>>>> e478bd9b1a3319bb5d4798d2e4651a1379ed6c19
         }
     ]
 }

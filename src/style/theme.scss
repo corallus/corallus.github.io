@@ -1,5 +1,9 @@
 @import "~bootstrap/scss/bootstrap";
 
+.lead strong {
+    font-weight: bold
+}
+
 
 @include media-breakpoint-up(md) {  
     .resume-date {

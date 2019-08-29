@@ -34,9 +34,14 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Link", name: "link", widget: "string"}
+      - {label: "Website(s)", name: "websites", widget: "list", fields: [
+        {label: "Name", name: "name", widget: "string"},
+        {label: "Link", name: "link", widget: "string", required: false},
+        {label: "Image", name: "image", widget: image, required: false}
+      ]}
+      - {label: "Link", name: "link", widget: "string", required: false}
       - {label: "Image", name: "image", widget: image, required: false}
-      - {label: "Customer", name: "customer", widget: "string"}
+      - {label: "Archive", name: "archive", widget: "boolean", required: false}
       - {label: "Toolset", name: "toolset", widget: "object", fields: [
         {label: "Django", name: "django", widget: "boolean", required: false},
         {label: "Wordpress", name: "wordpress", widget: "boolean", required: false},
@@ -48,8 +53,39 @@ collections:
         {label: "Gulp", name: "gulp", widget: "boolean", required: false},
         {label: "jQuery", name: "jquery", widget: "boolean", required: false},
         {label: "Sass", name: "sass", widget: "boolean", required: false},
-        {label: "AWS", name: "aws", widget: "boolean", required: false}
+        {label: "AWS", name: "aws", widget: "boolean", required: false},
+        {label: "Firebase", name: "firebase", widget: "boolean", required: false}
       ]}
       - {label: "Started", name: "started", widget: "date"}
       - {label: "Ended", name: "ended", widget: "date", required: false}
       - {label: "Description", name: "body", widget: "markdown", required: false}
+  - name: "interests"
+    label: "Interests"
+    folder: "src/content/interests"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "interest"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: image, required: false}
+      - {label: "Description", name: "body", widget: "markdown", required: false}
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "About"
+        name: "about"
+        file: "src/content/about.md"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about"}
+          - {label: Title, name: title, widget: string}
+          - {label: Surname, name: surname, widget: string}
+          - {label: Name, name: name, widget: string}
+          - {label: Github, name: github, widget: string}
+          - {label: LinkedIn, name: linkedin, widget: string}
+          - {label: Description, name: body, widget: markdown}
+          - {label: Skills, name: skills, widget: list, fields: [
+              {label: Name, name: name, widget: string},
+              {label: Skills, name: skills, widget: list, fields: [
+                {label: Name, name: name, widget: string},
+                {label: Skills, name: skills, widget: list, required: false}
+              ]}
+          ]}
