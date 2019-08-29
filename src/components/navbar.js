@@ -28,7 +28,7 @@ const Header = ({ siteTitle }) => {
       }
     `
   )
-  const sections = ['about', 'education', 'portfolio', 'interests']
+  const sections = ['about', 'education', 'portfolio']
   return (
     <Navbar expanded={expanded} onToggle={() => setExpanded(!expanded)} bg="primary" variant="dark" expand="lg" fixed="top">
       <Navbar.Brand href="#home">

@@ -101,13 +101,6 @@ const IndexPage = () => {
         </header>
         <Portfolio />
       </Section>
-      <hr className="d-print-none" />
-      <Section title="Interests" id="interests">
-        <header>
-          <h2>Interests</h2>
-        </header>
-        <Interests />
-      </Section>
     </Layout>
   )
 }
