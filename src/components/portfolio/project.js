@@ -41,8 +41,9 @@ export default ({ project }) => {
             <ul className="list-inline my-4">
               {toolset && Object.keys(toolset).map((key, index) => (
                 toolset[key] &&
-                <li className="list-inline-item" key={index}>
-                  <Tool tool={key} size="32" width="2em" />
+                <li className="list-inline-item pr-2 mb-2" key={index}>
+                  <Tool tool={key} className="d-print-none" size="32" width="2em" />
+                  <span className="d-none ml-1 d-print-inline">{key}</span>
                 </li>
               ))}
             </ul>
@@ -65,6 +66,7 @@ export default ({ project }) => {
           </Card.Body>
         </Col>
       </Row>
+      <hr className="d-none d-print-block" />
     </Card>
   )
 }

@@ -11,7 +11,7 @@ toolset:
   sass: true
   wordpress: true
 started: 2017-12-31T23:00:00.000Z
-ended: ''
+ended: 2018-12-31T23:00:00.000Z
 ---
 My client, an estate broker, was looking to modernise its' online presence. 
 

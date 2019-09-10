@@ -1,6 +1,6 @@
 ---
 templateKey: project
-title: New estate developments
+title: New estate development websites
 websites:
   - link: 'https://www.depauwfase3.nl/'
     image: /media/img-2019-08-08-123643.png
@@ -15,7 +15,7 @@ toolset:
   bootstrap: true
   sass: true
 started: 2018-12-01T11:31:49.187Z
-ended: ''
+ended: 2019-01-31T23:00:00.000Z
 ---
 I am repsonsible for implementing my clients` new estate development websites. It is important that the data on the website is up-to-date and easily maintainable.
 

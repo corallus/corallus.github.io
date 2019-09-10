@@ -9,7 +9,7 @@ export default () => {
     const data = useStaticQuery(graphql`
     query PortfolioQuery {
         allMarkdownRemark(
-            sort: { order: [DESC, ASC], fields: [frontmatter___archive, frontmatter___ended] }
+            sort: { order: [DESC, DESC], fields: [frontmatter___archive, frontmatter___ended] }
             filter: { frontmatter: { templateKey: { eq: "project" } } }
         ) {
             edges {

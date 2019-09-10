@@ -1,6 +1,6 @@
 ---
 templateKey: project
-title: Events
+title: Event Websites
 websites:
   - link: 'https://www.gigiinconcert.com'
     image: /media/img-2019-08-08-124801.png
@@ -11,6 +11,8 @@ websites:
   - link: 'https://www.sterrenvanholland.nl'
     image: /media/img-2019-08-28-001144.png
     name: sterrenvanholland.nl
+  - image: /media/img-2019-09-10-204630.png
+    name: fouteparkfestival.nl
 toolset:
   aws: true
   bootstrap: true
@@ -19,7 +21,7 @@ toolset:
   sass: true
   webpack: true
 started: 2019-03-01T22:59:35.541Z
-ended: ''
+ended: 2019-09-09T22:00:00.000Z
 ---
 My client, an event organizer has to maintain many different event websites. My task was to improve the quality and maintainability of their websites. The websites should be able to handle large amount of peak traffic at low cost.
 
