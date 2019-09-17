@@ -1,6 +1,6 @@
 backend:
   name: github
-  branch: master
+  branch: dev
   repo: corallus/portfolio
   base_url: 'https://infaxka6yj.execute-api.eu-central-1.amazonaws.com'
   auth_endpoint: '/prod/auth'
