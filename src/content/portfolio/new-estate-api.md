@@ -11,6 +11,9 @@ websites:
   - name: felsen-zeewolde.nl
     link: https://www.felsen-zeewolde.nl
     image: /media/img-2020-04-21-211850.png
+  - name: wonenin.org
+    link: https://www.wonenin.org
+    image: /media/img-2020-04-21-212556.png
 link: ""
 toolset:
   angular: true
@@ -18,7 +21,7 @@ toolset:
   bootstrap: true
   sass: true
 started: 2018-12-01T11:31:49.187Z
-ended: 2019-01-31T23:00:00.000Z
+ended: 2020-04-20T22:00:00.000Z
 ---
 I am repsonsible for implementing my clients` new estate development websites. It is important that the data on the website is up-to-date and easily maintainable.
 
