@@ -2,13 +2,16 @@
 templateKey: project
 title: New estate development websites
 websites:
-  - link: 'https://www.depauwfase3.nl/'
+  - link: https://www.depauwfase3.nl/
     image: /media/img-2019-08-08-123643.png
     name: depauwfase3.nl
-  - link: 'https://www.landvanmauve.nl'
+  - link: https://www.landvanmauve.nl
     image: /media/img-2019-08-08-123734.png
     name: landvanmauve.nl
-link: ''
+  - name: felsen-zeewolde.nl
+    link: https://www.felsen-zeewolde.nl
+    image: /media/img-2020-04-21-211850.png
+link: ""
 toolset:
   angular: true
   aws: true
