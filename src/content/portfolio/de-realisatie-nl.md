@@ -4,6 +4,7 @@ title: de-realisatie.nl
 websites: []
 link: 'https://www.de-realisatie.nl'
 image: /media/img-2019-08-08-130524.png
+archive: true
 toolset:
   bootstrap: true
   django: true

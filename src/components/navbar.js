@@ -5,12 +5,12 @@ import { Navbar, Nav } from "react-bootstrap"
 import Img from "gatsby-image"
 
 const Header = ({ siteTitle }) => {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(false)
   const _handleLinkClick = (e, target) => {
     if (typeof window !== undefined) {
       e.preventDefault()
       const element = document.getElementById(target)
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      element.scrollIntoView({ behavior: "smooth", block: "start" })
     }
   }
   const avatar = useStaticQuery(
@@ -28,30 +28,39 @@ const Header = ({ siteTitle }) => {
       }
     `
   )
-  const sections = ['about', 'education', 'portfolio']
+  const sections = ["about", "education", "portfolio"]
   return (
-    <Navbar expanded={expanded} onToggle={() => setExpanded(!expanded)} bg="primary" variant="dark" expand="lg" fixed="top">
+    <Navbar
+      expanded={expanded}
+      onToggle={() => setExpanded(!expanded)}
+      bg="primary"
+      variant="dark"
+      expand="lg"
+      fixed="top"
+    >
       <Navbar.Brand href="#home">
-        <span className="d-block d-lg-none">
-          {siteTitle}
-        </span>
+        <span className="d-block d-lg-none">{siteTitle}</span>
         <span className="d-none d-lg-block">
-          <Img fixed={avatar.file.childImageSharp.fixed} className="img-fluid img-profile rounded-circle border-1 mx-auto mb-2" alt="portret" />
+          <Img
+            fixed={avatar.file.childImageSharp.fixed}
+            className="img-fluid img-profile rounded-circle border-1 mx-auto mb-2"
+            alt="portret"
+          />
         </span>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto" onClick={() => setExpanded(false)}>
-          {sections.map(section =>
+          {sections.map((section) => (
             <Link
-              onClick={e => _handleLinkClick(e, section)}
-              to={'/#' + section}
+              onClick={(e) => _handleLinkClick(e, section)}
+              to={"/#" + section}
               className="nav-link"
               key={section}
             >
               {section}
             </Link>
-          )}
+          ))}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
