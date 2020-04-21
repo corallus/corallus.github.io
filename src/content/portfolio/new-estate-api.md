@@ -20,6 +20,9 @@ toolset:
   aws: true
   bootstrap: true
   sass: true
+  react: true
+  gatsby: true
+  webpack: true
 started: 2018-12-01T11:31:49.187Z
 ended: 2020-04-20T22:00:00.000Z
 ---
