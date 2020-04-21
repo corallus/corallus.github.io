@@ -2,17 +2,20 @@
 templateKey: project
 title: Event Websites
 websites:
-  - link: 'https://www.gigiinconcert.com'
+  - link: https://www.gigiinconcert.com
     image: /media/img-2019-08-08-124801.png
     name: gigiinconcert.com
-  - link: 'https://www.puurhollands.eu'
+  - link: https://www.puurhollands.eu
     image: /media/img-2019-08-09-160453.png
     name: puurhollands.eu
-  - link: 'https://www.sterrenvanholland.nl'
+  - link: https://www.sterrenvanholland.nl
     image: /media/img-2019-08-28-001144.png
     name: sterrenvanholland.nl
   - image: /media/img-2019-09-10-204630.png
     name: fouteparkfestival.nl
+  - name: sterrenvanholland.nl
+    link: https://www.sterrenvanholland.nl
+    image: /media/img-2020-04-21-212703.png
 toolset:
   aws: true
   bootstrap: true
