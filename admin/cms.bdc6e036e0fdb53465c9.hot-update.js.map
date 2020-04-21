@@ -1,0 +1,1 @@
+{"version":3,"file":"cms.bdc6e036e0fdb53465c9.hot-update.js","sources":["webpack:///./src/cms/init.js"],"sourcesContent":["import CMS from 'netlify-cms-app'\nimport FileSystemBackend from 'netlify-cms-backend-fs'\n\n// Start NetlifyCMS\nCMS.init()"],"mappings":";;;;;;;;;;;;;;;;;;;AAAA;AACA;AACA;AAEA;;;;A","sourceRoot":""}
